@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @layer {
+        td {
+          text-align: center;
+          color: #295700;
+          padding: 10px 0;
+        }
+
+        .clipPathMobile {
+          clip-path: polygon(50% 20%, 100% 0, 100% 100%, 50% 80%, 0 100%, 0 0);
+        }
+
+        .clipPathDesktop {
+          clip-path: polygon(49% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+        }
+
+        .slide-in {
+          animation-name: slide-in;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+        }
+
+        @keyframes slide-in {
+          from {
+            transform: translateY(-100%);
+          }
+
+          to {
+            transform: translateY(0%);
+          }
+        }
+
+        .slide-out {
+          animation-name: slide-out;
+          animation-duration: 1s;
+          animation-fill-mode: backwards;
+        }
+
+        @keyframes slide-out {
+          from {
+            transform: translateY(0%);
+          }
+
+          to {
+            transform: translateY(-100%);
+          }
+        }
+
+        @media (min-width: 768px) {
+          td {
+            color: white;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#D4DDCC]">
+    <!-- Live Header -->
+
+    <header
+      class="bg-[#2A3D19] px-4 md:pr-0 py-0 flex justify-between items-center z-30 relative"
+      id="header"
+    >
+      <img
+        src="images/thrive-logo.png"
+        alt="logo"
+        class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
+      />
+      <nav>
+        <div class="md:hidden cursor-pointer">
+          <img
+            src="images/hamburger.png"
+            alt="hamburger"
+            class="w-8 h-8 block"
+            id="openMenu"
+          />
+          <img
+            src="images/close-menu.png"
+            alt="close-menu"
+            class="w-8 h-8 hidden"
+            id="closeMenu"
+          />
+        </div>
+
+        <ul class="hidden md:flex text-slate-100">
+          <li>
+            <a href="/src/index.html" class="block px-4 py-4 font-semibold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/pages/about.html"
+              class="block px-4 py-4 font-semibold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/pages/mainTherapyPage.html"
+              class="block px-4 py-4 font-semibold"
+              >Therapy</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/pages/community/community.html"
+              class="block px-4 py-4 font-semibold"
+              >Community</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/pages/signup.html"
+              class="block px-4 py-4 font-semibold"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <ul
+      id="mobileMenu"
+      class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
+    >
+      <li>
+        <a
+          href="/src/index.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/src/pages/about.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          href="/src/pages/mainTherapyPage.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+          >Therapy</a
+        >
+      </li>
+      <li>
+        <a
+          href="/src/pages/community/community.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+          >Community</a
+        >
+      </li>
+      <li>
+        <a
+          href="/src/pages/signup.html"
+          class="block pt-4 text-center text-lg font-semibold"
+          >Sign Up</a
+        >
+      </li>
+    </ul>
+
+    <!-- End of Live Header -->
+
+    <h1
+      class="text-[#295700] text-xl font-semibold text-center py-8 md:border-b-2 border-[#295700] md:mb-8"
+    >
+      BOOK APPOINTMENT
+    </h1>
+
+    <div class="md:flex items-stretch">
+      <div class="md:order-2 md:w-[48%]">
+        <div class="bg-white p-2 mx-4">
+          <div class="flex gap-4 items-center">
+            <img
+              src="/src/pages/Contact_Therapist/voiceandvideocall/images/musa.png"
+              alt="man"
+              class="w-28 h-28 rounded-sm object-cover"
+            />
+            <div>
+              <p class="uppercase text-[#295700] text-xl font-semibold mb-4s">
+                M. Musa
+              </p>
+              <p class="text-[#295700]">Degree: BSc MBBS</p>
+              <p class="text-[#295700]">
+                Specialty: Senior at Therapy Chamber, Ikoyi Lagos.
+              </p>
+              <div class="flex gap-4 mt-2">
+                <img src="images/call vector.png" alt="call" class="w-4 h-4" />
+                <img
+                  src="images/message vector.png"
+                  alt="message"
+                  class="w-4 h-4"
+                />
+              </div>
+            </div>
+          </div>
+          <p class="mt-8 mb-2 text-[#295700]">Details</p>
+          <p class="text-[#295700] mb-2">
+            I am a compassionate Licensed Professional Counsellor with over a
+            decade of experience supporting individuals and families. My
+            commitment to mental health advocacy and creating a sage, healing
+            space drives my work in the field.
+          </p>
+        </div>
+
+        <div
+          class="bg-[#DCAE96] rounded-sm px-2 py-1 mt-4 mb-2 flex md:hidden items-center gap-4 mx-4"
+        >
+          <img src="images/back arrow.png" alt="back arrow" />
+          <p class="flex-1 text-center text-[#295700]">SEPT 2023</p>
+          <img src="images/forward arrow.png" alt="forward arrow" />
+        </div>
+      </div>
+
+      <div class="md:order-1 md:w-[48%]">
+        <div
+          class="bg-[#DCAE96] rounded-sm px-2 py-1 mt-4 md:mt-0 mb-2 hidden md:grid grid-cols-2 items-center gap-4 mx-4"
+        >
+          <div class="flex justify-between items-center">
+            <img src="images/white-arrow-back.png" alt=" white back arrow" />
+            <img src="images/white-arrow-down.png" alt="white arrow down" />
+          </div>
+          <div class="flex justify-evenly gap-5 items-center">
+            <p class="flex-1 text-white text-center font-semibold">
+              August 2023
+            </p>
+            <img
+              src="images/white-arrow-forward.png"
+              alt="white forward arrow"
+            />
+          </div>
+        </div>
+        <div
+          class="bg-[#DCAE96] rounded-sm px-2 pt-1 pb-4 grid my-2 md:mt-0 mx-4"
+        >
+          <table>
+            <thead>
+              <th class="uppercase text-center text-[#295700] text">sun</th>
+              <th class="uppercase text-center text-[#295700] text">mon</th>
+              <th class="uppercase text-center text-[#295700] text">tue</th>
+              <th class="uppercase text-center text-[#295700] text">wed</th>
+              <th class="uppercase text-center text-[#295700] text">thur</th>
+              <th class="uppercase text-center text-[#295700] text">fri</th>
+              <th class="uppercase text-center text-[#295700] text">sat</th>
+            </thead>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>01</td>
+              <td>02</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>04</td>
+              <td
+                class="text-white md:text-[#DCAE96] bg-[#295700] md:bg-white rounded-full"
+              >
+                05
+              </td>
+              <td>06</td>
+              <td class="border border-[#295700] md:border-white rounded-full">
+                07
+              </td>
+              <td>08</td>
+              <td>09</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+              <td>21</td>
+              <td class="border border-[#295700] md:border-white rounded-full">
+                22
+              </td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+              <td>20</td>
+            </tr>
+          </table>
+        </div>
+        <div
+          class="flex md:hidden items-center gap-2 justify-between py-2 px-4 bg-[#DCAE96] mx-4"
+        >
+          <button class="bg-[#295700] text-white p-1 rounded-full">
+            10AM-12PM
+          </button>
+          <button
+            class="border border-[#295700] rounded-full py-1 px-4 text-[#295700]"
+          >
+            1PM-3PM
+          </button>
+          <button
+            class="border border-[#295700] rounded-full py-1 px-4 text-[#295700]"
+          >
+            3PM-10PM
+          </button>
+        </div>
+
+        <div
+          class="hidden md:flex items-center gap-2 justify-between py-2 px-4 bg-[#DCAE96] mx-4 mt-2"
+        >
+          <form class="md:flex gap-20 justify-center w-full">
+            <div class="flex gap-4">
+              <input type="checkbox" id="morning" checked />
+              <label for="morning" class="text-white"
+                >MORNING: 9AM - 12PM</label
+              >
+            </div>
+
+            <div class="flex gap-4">
+              <input type="checkbox" id="afternoon" />
+              <label for="morning" class="text-white"
+                >AFTERNOON: 3PM - 6PM</label
+              >
+            </div>
+          </form>
+        </div>
+
+        <div class="flex justify-center">
+          <a href="/src/pages/therapy/Premium.html"
+            ><button
+              class="text-white font-semibold bg-[#295700] rounded-md px-12 py-2 my-16"
+            >
+              BOOK APPOINTMENT
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--  Footer  -->
+
+    <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 relative -mt-32 md:mt-0">
+      <a href="#header"
+        ><img
+          src="images/triangle.png"
+          alt="triangle"
+          class="absolute bottom-8 right-4"
+      /></a>
+
+      <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
+        <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Thrive</h1>
+            <a href="/src/pages/about.html" class="font-semibold">About</a>
+            <a href="/src/pages/moodTrack/index.mood.html" class="font-semibold">Mood Track</a>
+            <a
+              href="/src/pages/Help-Support-Page/support.html"
+              class="font-semibold"
+              >Help & Support</a
+            >
+          </div>
+
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Social</h1>
+            <a href="" class="font-semibold">Facebook</a>
+            <a href="" class="font-semibold">Instagram</a>
+            <a href="" class="font-semibold">Twitter</a>
+          </div>
+        </div>
+
+        <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
+          <h1 class="font-bold text-2xl mb-4">Services</h1>
+          <a
+            href="/src/pages/resources/resourcesMain.html"
+            class="font-semibold"
+            >Resources</a
+          >
+          <a
+            href="/src/pages/Relaxation/Relaxation8/relaxation8.html"
+            class="font-semibold"
+            >Relaxation</a
+          >
+          <a href="/src/pages/mainTherapyPage.html" class="font-semibold"
+            >Therapy</a
+          >
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+        >
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
+          />
+          <button
+            class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <p class="text-center text-white mt-8 font-semibold">
+        copyright&copy; <span id="year"></span> thrive.techtribe all right
+        reserved
+      </p>
+    </footer>
+
+    <!-- End of Footer -->
+
+    <script src="headerandfooter.js"></script>
+  </body>
+</html>

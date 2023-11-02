@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>FAQ</title>
+</head>
+<body class="bg-[#D9D9D9]">
+  <style type="text/tailwindcss">
+    @layer utilities {
+          .slide-in {
+            animation-name: slide-in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-in {
+            from {
+              transform: translateY(-100%);
+            }
+  
+            to {
+              transform: translateY(0%);
+            }
+          }
+  
+          .slide-out {
+            animation-name: slide-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-out {
+            from {
+              transform: translateY(0%);
+            }
+  
+            to {
+              transform: translateY(-100%);
+            }
+          }
+        }
+      </style>
+  </head>
+  <body>
+    <!-- Live Header -->
+
+    <header class="bg-[#2A3D19] px-4 py-0 flex justify-between items-center z-30 relative" id="header">
+      <img src="/src/assets/aboutAsset/Thrive logo.png" alt="logo"
+        class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]" />
+      <nav>
+        <div class="md:hidden cursor-pointer">
+          <img src="/src/assets/communitypage-assets/hamburger.png" alt="hamburger" class="w-8 h-8 block"
+            id="openMenu" />
+          <img src="images/close-menu.png" alt="close-menu" class="w-8 h-8 hidden" id="closeMenu" />
+        </div>
+        <ul class="hidden md:flex text-slate-100">
+          <li>
+            <a href="/src/index.html" class="block px-4 py-4 font-semibold">Home</a>
+          </li>
+          <li>
+            <a href="/src/pages/about.html" class="block px-4 py-4 font-semibold">About</a>
+          </li>
+          <li>
+            <a href="/src/pages/mainTherapyPage.html" class="block px-4 py-4 font-semibold">Therapy</a>
+          </li>
+          <li>
+            <a href="/src/pages/community/community.html" class="block px-4 py-4 font-semibold">Community</a>
+          </li>
+          <li>
+            <a href="/src/pages/signup.html" class="block px-4 py-4 font-semibold">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <ul id="mobileMenu"
+      class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20">
+      <li>
+        <a href="/src/index.html" class="block py-4 text-center text-lg font-semibold border-b border-[#fff]">Home</a>
+      </li>
+      <li>
+        <a href="/src/pages/about.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]">About</a>
+      </li>
+      <li>
+        <a href="/src/pages/mainTherapyPage.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]">Therapy</a>
+      </li>
+      <li>
+        <a href="/src/pages/community/community.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]">Community</a>
+      </li>
+      <li>
+        <a href="/src/pages/signup.html" class="block pt-4 text-center text-lg font-semibold">Sign Up</a>
+      </li>
+    </ul>
+  <!-- header ends here -->
+  <div>
+    <section class="flex items-center justify-center  h-64 bg-green-800/10 bg-no-repeat bg-cover relative"
+      style=" background-image: url('https://mensfitness.co.uk/wp-content/uploads/sites/2/2023/06/Shutterstock_1840587385-1.jpg');">
+      <h1 class="uppercase font-bold text-2xl text-green-800/100">Ask us any thing </h1>
+      <div class="h-full w-full  bg-green-800/30 absolute top-0">
+
+      </div>
+    </section>
+
+    <div class="bg-green-800/5 pb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 w-[90%] mx-auto ">
+        <img src="/img/Question mark.png" alt="mark" shadow-md>
+        <div class=" space-y-5 py-8">
+          <h2 class="text-green-800/100 text-xl font-bold tracking-wider">FREQUENTLY ASKED QUESTIONS</h2>
+          <div x-data="{ isOpen: false} " class="my-3">
+            <div class="flex justify-between  bg-[#dcae96]  p-4 rounded-md shadow-md">
+              <div class="cursor-pointer">What Is Thrive?</div>
+              <box-icon name='caret-down' class=" bg-[#295700] rounded-full p-1 text-white shadow-md"
+                @click="isOpen = !isOpen"></box-icon>
+            </div>
+  
+            <div x-show="isOpen" class="bg-[#D9D9D9] px-4  pt-4 pb-6 rounded-md">
+  
+              <p>Thrive is a platform that connects individuals seeking mental health support with licensed and certified
+                therapists</p>
+            </div>
+          </div>
+          <div x-data="{ isOpen: false} " class="my-3">
+            <div class="flex justify-between  bg-[#dcae96]  p-4 rounded-md shadow-md">
+              <div class="cursor-pointer  ">How Does Thrive Work?</div>
+              <box-icon name='caret-down' class=" bg-[#295700] rounded-full p-1 text-white" @click="isOpen = !isOpen"></box-icon>
+            </div>
+  
+            <div x-show="isOpen" class="bg-[#D9D9D9] px-4  pt-4 pb-6 rounded-md">
+  
+              <p>Users can sign up for an account on our website or mobile app and browse through our list of therapists
+                to find one that meets your needs. Your can then book a session with the therapist.</p>
+            </div>
+          </div>
+          <div x-data="{ isOpen: false} " class="my-3">
+            <div class="flex justify-between  bg-[#dcae96]  p-4 rounded-md shadow-md">
+              <div class="cursor-pointer  ">Are There Qualified Therapist?</div>
+              <box-icon name='caret-down' class=" bg-[#295700] rounded-full p-1 text-white" @click="isOpen = !isOpen"></box-icon>
+            </div>
+  
+            <div x-show="isOpen" class="bg-[#D9D9D9] px-4  pt-4 pb-6 rounded-md">
+  
+              <p>Yes, all therapists on thrive are licensed and certified mental health professionals.</p>
+            </div>
+          </div>
+          <div x-data="{ isOpen: false} " class="my-3">
+            <div class="flex justify-between  bg-[#dcae96]  p-4 rounded-md shadow-md">
+              <div class="cursor-pointer  ">Is My Information Confidential?</div>
+              <box-icon name='caret-down' class=" bg-[#295700] rounded-full p-1 text-white" @click="isOpen = !isOpen"></box-icon>
+            </div>
+  
+            <div x-show="isOpen" class="bg-[#D9D9D9] px-4  pt-4 pb-6 rounded-md">
+  
+              <p>Yes, we take privacy and confidentiality very seriously. All sessions are encrypted and your information
+                is protected.</p>
+            </div>
+          </div>
+          <div x-data="{ isOpen: false} " class="my-3">
+            <div class="flex justify-between  bg-[#dcae96]  p-4 rounded-md shadow-md">
+              <div class="cursor-pointer">How Long Does A session Last?</div>
+              <box-icon name='caret-down' class=" bg-[#295700] rounded-full p-1 text-white" @click="isOpen = !isOpen"></box-icon>
+            </div>
+  
+            <div x-show="isOpen" class="bg-[#D9D9D9] px-4  pt-4 pb-6 rounded-md">
+  
+              <p>The duration of a standard session is fifty minutes to an hour.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between mb-6 px-10 bg-[#D4DDCC] pt-5 rounded-md shadow w-[90%] mx-auto ">
+          <p>Can’t find the answer you’re looking for? Please chat with our friendly team</p>
+          <a href=""><button class="bg-[#295700] px-4 py-2 mb-6 text-white">Get in Touch</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer start here -->
+   
+    <!-- Footer start here -->
+    <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 mt-8 md:mt-0 relative">
+      <a href="#header"
+        ><img
+          src="/src/assets/aboutAsset/Vector.png"
+          alt="triangle"
+          class="absolute bottom-8 right-4"
+      /></a>
+
+      <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
+        <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Thrive</h1>
+            <a href="/src/pages/about.html" class="font-semibold"
+              >About</a
+            >
+            <a href="" class="font-semibold">Mood Track</a>
+            <a href="/src/pages/Help-Support-Page/support.html" class="font-semibold"
+              >Help & Support</a
+            >
+          </div>
+
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Social</h1>
+            <a href="" class="font-semibold">Facebook</a>
+            <a href="" class="font-semibold">Instagram</a>
+            <a href="" class="font-semibold">Twitter</a>
+          </div>
+        </div>
+
+        <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
+          <h1 class="font-bold text-2xl mb-4">Services</h1>
+          <a
+            href="/src/pages/resources/resourcesMain.html"
+            class="font-semibold"
+            >Resources</a
+          >
+          <a
+            href="/src/pages/Relaxation/Relaxation8/relaxation8.html"
+            class="font-semibold"
+            >Relaxation</a
+          >
+          <a
+            href="/src/pages/mainTherapyPage.html"
+            class="font-semibold"
+            >Therapy</a
+          >
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+        >
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
+          />
+          <button
+            class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <p class="text-center text-white mt-8 font-semibold">
+        copyright&copy; <span id="year"></span> thrive.techtribe all right
+        reserved
+      </p>
+    </footer>
+    <!-- End of Footer -->
+</body>
+
+</html>

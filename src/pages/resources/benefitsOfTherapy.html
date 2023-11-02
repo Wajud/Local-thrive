@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Video</title>
+</head>
+<body class="bg-[#D9D9D9]">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .slide-in {
+            animation-name: slide-in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-in {
+            from {
+              transform: translateY(-100%);
+            }
+  
+            to {
+              transform: translateY(0%);
+            }
+          }
+  
+          .slide-out {
+            animation-name: slide-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-out {
+            from {
+              transform: translateY(0%);
+            }
+  
+            to {
+              transform: translateY(-100%);
+            }
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <!-- Live Header -->
+  
+      <header
+        class="bg-[#2A3D19] px-4 py-0 flex justify-between items-center z-30 relative"
+        id="header"
+      >
+        <img
+          src="/src/assets/aboutAsset/Thrive logo.png"
+          alt="logo"
+          class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
+        />
+        <nav>
+          <div class="md:hidden cursor-pointer">
+            <img
+              src="/src/assets/communitypage-assets/hamburger.png"
+              alt="hamburger"
+              class="w-8 h-8 block"
+              id="openMenu"
+            />
+            <img
+              src="/src/assets/communitypage-assets/close-menu.png"
+              alt="close-menu"
+              class="w-8 h-8 hidden"
+              id="closeMenu"
+            />
+          </div>
+          <ul class="hidden md:flex text-slate-100">
+            <li>
+              <a href="/src/index.html" class="block px-4 py-4 font-semibold">Home</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/about.html"
+                class="block px-4 py-4 font-semibold"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/mainTherapyPage.html"
+                class="block px-4 py-4 font-semibold"
+                >Therapy</a
+              >
+            </li>
+            <li>
+              <a href="/src/pages/community/community.html" class="block px-4 py-4 font-semibold">Community</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/signup.html"
+                class="block px-4 py-4 font-semibold"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <ul
+        id="mobileMenu"
+        class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
+      >
+        <li>
+          <a
+            href="/src/index.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/about.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/mainTherapyPage.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Therapy</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/community/community.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Community</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/signup.html"
+            class="block pt-4 text-center text-lg font-semibold"
+            >Sign Up</a
+          >
+        </li>
+      </ul>
+
+    <!-- End of Live Header -->
+    <div class="mx-36">
+      <h1
+        class="text-3xl text-[#295700] font-serif font-bold py-20 text-center"
+      >
+        BENEFITS OF THERAPY FOR YOURSELF, FAMILY AND RELATIONSHIP
+      </h1>
+      <div class="class= flex justify-center mb-20">
+        <img
+          src="/src/assets/resourcesAssets/Rectangle 502.png "
+          alt="picture of two persons discussing"
+        />
+      </div>
+
+      <blockquote class="text-center font-bold p-5">
+        "Therapy is a safe space to explore your thoughts and feelings, without
+        judgment. It can help you understand yourself better and make positive
+        changes in your life."
+      </blockquote>
+      <p class="pb-5">
+        <span class="font-semibold">Trauma Recovery:</span> For those who have
+        experienced trauma, therapy provides a structured and supportive space
+        to process and heal from traumatic experiences.
+      </p>
+      <p class="pb-5">
+        It's important to note that the benefits of therapy can vary depending
+        on the individual's needs, the approach used, and the therapeutic
+        relationship. If you're considering therapy, it's recommended to consult
+        with a qualified mental health professional to determine the best
+        approach for your specific circumstances.
+      </p>
+      <p class="pb-5">
+        Therapy, also known as counseling or psychotherapy, offers a wide range
+        of benefits that contribute to improved mental health, emotional
+        well-being, and overall quality of life. Here are some of the key
+        benefits of therapy...
+      </p>
+      <p class="pb-5">
+        <span class="font-semibold">Choose a Bedtime and Wake-Up Time:</span>
+        Select a bedtime and wake-up time that aligns with your natural sleep
+        preferences and daily routine. Aim for 7-9 hours of sleep per night.Be
+        Consistent Every Day: Try to go to bed and wake up at the same time
+        every day, even on weekends. Consistency reinforces your body's
+        sleep-wake cycle.Avoid Drastic Changes: Gradually adjust your sleep
+        schedule if needed. Shift your bedtime and wake-up time by 15-30 minutes
+        every few days until you reach your desired schedule.Use an Alarm: Set
+        an alarm to remind you when it's time to start winding down and prepare
+        for bed. This helps signal your body that sleep is approaching.
+      </p>
+      <p class="pb-5">
+        <span class="font-semibold"
+          >Consult a healthcare professional:Recognize the Need:</span
+        >
+        If you've been struggling with sleep difficulties for several weeks and
+        it's affecting your daily functioning, it's a sign to seek professional
+        help.Primary Care Physician: Start by scheduling an appointment with
+        your primary care physician (PCP). They can evaluate your overall health
+        and may provide initial guidance or refer you to a sleep specialist if
+        needed.Sleep Specialist: If your PCP suspects a more complex sleep
+        disorder, they might refer you to a sleep specialist. Sleep specialists
+        are doctors with expertise in diagnosing and treating sleep-related
+        issues.
+      </p>
+      <p class="pb-5">
+        <span class="font-semibold">Trauma Recovery:</span> Select a bedtime and
+        wake-up time that aligns with your natural sleep preferences and daily
+        routine. Aim for 7-9 hours of sleep per night.Be Consistent Every Day:
+        Try to go to bed and wake up at the same time every day, even on
+        weekends. Consistency reinforces your body's sleep-wake cycle.Avoid
+        Drastic Changes: Gradually adjust your sleep schedule if needed. Shift
+        your bedtime and wake-up time by 15-30 minutes every few days until you
+        reach your desired schedule.Use an Alarm: Set an alarm to remind you
+        when it's time to start winding down and prepare for bed. This helps
+        signal your body that sleep is approaching.
+      </p>
+      <p class="pb-5">
+        <span class="font-semibold"
+          >Consult a healthcare professional:Recognize the Need:</span
+        >
+        If you've been struggling with sleep difficulties for several weeks and
+        it's affecting your daily functioning, it's a sign to seek professional
+        help.Primary Care Physician: Start by scheduling an appointment with
+        your primary care physician (PCP). They can evaluate your overall health
+        and may provide initial guidance or refer you to a sleep specialist if
+        needed.Sleep Specialist: If your PCP suspects a more complex sleep
+        disorder, they might refer you to a sleep specialist. Sleep specialists
+        are doctors with expertise in diagnosing and treating sleep-related
+        issues.
+      </p>
+      <p class="pb-5">
+        <span class="font-semibold">Personal Insight:</span> Through exploration
+        and discussion, therapy can lead to a deeper understanding of one's
+        personal values, motivations, and goals.
+      </p>
+      <p class="pb-5">
+        <span class="font-semibold">Work-Life Balance:</span> Therapy can assist
+        individuals in finding a healthy balance between work, personal life,
+        and self-care, reducing burnout and stress.
+      </p>
+      <div
+        class="text-white my-20 grid-cols-2 grid mx-44 space-x-40"
+      >
+        <a href="/src/pages/resources/resourcesMain.html"><button class="bg-[#295700] ml-20 px-8 py-8 rounded-2xl w-fit">
+          BACK TO RESOUCRCES 
+        </button></a>
+        <a href="/src/pages/resources/articleList.html"><button class="bg-[#295700] px-8 py-8 rounded-2xl w-fit"> BACK </button></a>
+      </div>
+    </div>
+    <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 mt-8 md:mt-0 relative">
+      <a href="#header"
+        ><img
+          src="/src/assets/aboutAsset/Vector.png"
+          alt="triangle"
+          class="absolute bottom-8 right-4"
+      /></a>
+
+      <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
+        <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Thrive</h1>
+            <a href="/src/pages/about.html" class="font-semibold"
+              >About</a
+            >
+            <a href="" class="font-semibold">Mood Track</a>
+            <a href="/src/pages/Help-Support-Page/support.html" class="font-semibold"
+              >Help & Support</a
+            >
+          </div>
+
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Social</h1>
+            <a href="" class="font-semibold">Facebook</a>
+            <a href="" class="font-semibold">Instagram</a>
+            <a href="" class="font-semibold">Twitter</a>
+          </div>
+        </div>
+
+        <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
+          <h1 class="font-bold text-2xl mb-4">Services</h1>
+          <a
+            href="/src/pages/resources/resourcesMain.html"
+            class="font-semibold"
+            >Resources</a
+          >
+          <a
+            href="/src/pages/Relaxation/Relaxation8/relaxation8.html"
+            class="font-semibold"
+            >Relaxation</a
+          >
+          <a
+            href="/src/pages/mainTherapyPage.html"
+            class="font-semibold"
+            >Therapy</a
+          >
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+        >
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
+          />
+          <button
+            class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <p class="text-center text-white mt-8 font-semibold">
+        copyright&copy; <span id="year"></span> thrive.techtribe all right
+        reserved
+      </p>
+    </footer>
+
+    <!-- End of Footer -->
+
+    <script src="main.js"></script>
+    <script src="/src/pages/community/headerandfooter.js"></script>
+
+    <script src="headerandfooter.js"></script>
+  </body>
+</html>

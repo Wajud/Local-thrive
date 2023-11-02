@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact_5_6</title>
+</head>
+<body class="bg-[#D9D9D9]">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .slide-in {
+            animation-name: slide-in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-in {
+            from {
+              transform: translateY(-100%);
+            }
+  
+            to {
+              transform: translateY(0%);
+            }
+          }
+  
+          .slide-out {
+            animation-name: slide-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-out {
+            from {
+              transform: translateY(0%);
+            }
+  
+            to {
+              transform: translateY(-100%);
+            }
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <!-- Live Header -->
+  
+      <header
+        class="bg-[#2A3D19] px-4 py-0 flex justify-between items-center z-30 relative"
+        id="header"
+      >
+        <img
+          src="/src/assets/aboutAsset/Thrive logo.png"
+          alt="logo"
+          class="w-32 sm:w-40 h-16 sm:h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
+        />
+        <nav>
+          <div class="md:hidden cursor-pointer">
+            <img
+              src="/src/assets/communitypage-assets/hamburger.png"
+              alt="hamburger"
+              class="w-8 h-8 block"
+              id="openMenu"
+            />
+            <img
+              src="/src/assets/communitypage-assets/close-menu.png"
+              alt="close-menu"
+              class="w-8 h-8 hidden"
+              id="closeMenu"
+            />
+          </div>
+          <ul class="hidden md:flex text-slate-100">
+            <li>
+              <a href="/src/index.html" class="block px-4 py-4 font-semibold">Home</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/about.html"
+                class="block px-4 py-4 font-semibold"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/mainTherapyPage.html"
+                class="block px-4 py-4 font-semibold"
+                >Therapy</a
+              >
+            </li>
+            <li>
+              <a href="/src/pages/community/community.html" class="block px-4 py-4 font-semibold">Community</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/signup.html"
+                class="block px-4 py-4 font-semibold"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <ul
+        id="mobileMenu"
+        class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
+      >
+        <li>
+          <a
+            href="/src/index.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/about.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/mainTherapyPage.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Therapy</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/community/community.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Community</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/signup.html"
+            class="block pt-4 text-center text-lg font-semibold"
+            >Sign Up</a
+          >
+        </li>
+      </ul>
+
+    <!-- End of Live Header -->
+
+<body class="bg-[#FFFFFF]">
+ <!-- Therapist Menu -->
+    <section id="therapist-menu" class="flex mt-[30px] mb-[40px] text-[#2A5801] ml-[30px] h-[600px]">
+        <div class="pt-[20px] pb-[20px] bg-[#DCAE96] w-3/10 rounded-[10px] mx-[25px] px-[20px]">
+            <p>Current Therapist</p>
+
+            <div class="flex bg-white rounded-[10px] p-[10px] mt-[10px] w-[220px]">
+                <img class="w-12 h-12" src="images/Ellipse 9.png" alt="profile icon">
+                <div>
+                    <div class="flex">
+                        <h2 class="ml-[30px]">M. MUSA</h2>
+                        <img class="ml-[42px] mt-[7px] w-[8px] h-[8px]" src="images/Ellipse 40.png" alt="">
+                    </div> <br>
+                    
+                    <h3 class="ml-[10px] mt-[-20px] text-[14px]">Senior At Therapy</h3>
+                </div>
+            </div>
+
+            <div class="mt-[20px]">
+                <p class="mt[0px]">Previous Therapists</p>
+
+                <div class="flex bg-white rounded-[10px] p-[10px] mt-[10px]">
+                    <img class="w-12 h-12" src="images/Ellipse 7.png" alt="profile icon">
+                <div>
+                        <div class="flex">
+                            <h2 class="ml-[30px]">K. WAJUD</h2>
+                            <img class="ml-[42px] mt-[7px] w-[8px] h-[8px]" src="images/Ellipse yellow.png" alt="">
+                        </div> <br>
+        
+                        <h3 class="ml-[10px] mt-[-20px] text-[14px]">Senior At Therapy</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex bg-white rounded-[10px] p-[10px] mt-[20px]">
+                <img class="w-12 h-12" src="images/Ellipse 42.png" alt="profile icon">
+                <div>
+                    <div class="flex">
+                        <h2 class="ml-[30px]">P. RAHMAH</h2>
+                        <img class="ml-[30px] mt-[7px] w-[8px] h-[8px]" src="images/Ellipse 42-1.png" alt="">
+                    </div> <br>
+
+                    <h3 class="ml-[10px] mt-[-20px] text-[14px]">Senior At Therapy</h3>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Chat Area -->
+        <div id="chat-page " class="w-[950px]">
+            <!--count down time-->
+            <div>
+                <h1 id="countdown" class="flex justify-end text-[#E60E1BCC] font-semibold text-[48px]">60:00</h1>
+            </div>
+
+            <!--Messages-->
+
+            <div id="messages" class="flex bg-[#295700] rounded-[10px] w-[300px] h-[60px] mb-[30px]">
+                <h2 class="text-[#D4DDCC] py-2 px-4 m-1">When depression creeps in</h2>
+            </div>
+    
+            <div class="ml-[700px] bg-[#DCAE96] rounded-[10px] w-[300px] h-[60px] mb-[30px]">
+                <h2 class="text-[#000000] py-2 px-4 m-1">in, you  gradually start losing it.</h2>
+            </div>
+
+            <div class="flex bg-[#295700] rounded-[10px] w-[300px] h-[70px] mb-[30px]">
+                <h2 class="text-[#D4DDCC] py-2 px-4 m-1">When depression creeps in, you  gradually </h2>
+            </div>
+            
+            <div class="ml-[700px] bg-[#DCAE96] rounded-[10px] w-[300px] h-[70px] mb-[30px]">
+                <h2 class="text-[#000000] py-2 px-4 m-1">When depression creeps in, you  gradually start losing it.</h2>
+            </div>
+
+        <!-- Type Message & Submit -->
+        <div id="messageInputContainer" class="flex items-center bg-[#DCAE96] rounded-[10px] w-[1000px] h-[45px] mt-[130px]">
+            <img class="ml-[5px] py-[5px] w-[30px] h-[35px]" src="images/Vectorattachment.png" alt="attach">
+            <input type="text" id="messageInput" class="bg-[#DCAE96] rounded-[10px] text-[#000000] focus:border-[#FFFFFF] text-sm flex-grow p-3" placeholder="| Type Message">
+            <button id="sendMessage">
+                <img class="pr-[10px] w-[40px] h-[35px]" src="images/Send.png" alt="send">
+            </button>
+        </div>
+            
+        <!-- Message Locked -->
+        <div id="messageLocked" class="hidden flex pl-[250px]">
+            <img src="images/Locklock.png" alt="chatLocked">
+            <h2 class="text-[#000000] text-[18px]">Your Session Has Ended. Kindly book another session to continue</h2>
+        </div>
+
+    </section>
+
+
+    <!-- FOOOTER -->
+  
+    <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 mt-8 md:mt-0 relative">
+        <a href="#header"
+          ><img
+            src="/src/assets/aboutAsset/Vector.png"
+            alt="triangle"
+            class="absolute bottom-8 right-4"
+        /></a>
+  
+        <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
+          <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
+            <div class="text-white flex flex-col gap-2">
+              <h1 class="font-bold text-2xl mb-4">Thrive</h1>
+              <a href="/src/pages/about.html" class="font-semibold"
+                >About</a
+              >
+              <a href="" class="font-semibold">Mood Track</a>
+              <a href="/src/pages/Help-Support-Page/support.html" class="font-semibold"
+                >Help & Support</a
+              >
+            </div>
+  
+            <div class="text-white flex flex-col gap-2">
+              <h1 class="font-bold text-2xl mb-4">Social</h1>
+              <a href="" class="font-semibold">Facebook</a>
+              <a href="" class="font-semibold">Instagram</a>
+              <a href="" class="font-semibold">Twitter</a>
+            </div>
+          </div>
+  
+          <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
+            <h1 class="font-bold text-2xl mb-4">Services</h1>
+            <a
+              href="/src/pages/resources/resourcesMain.html"
+              class="font-semibold"
+              >Resources</a
+            >
+            <a
+              href="/src/pages/Relaxation/Relaxation8/relaxation8.html"
+              class="font-semibold"
+              >Relaxation</a
+            >
+            <a
+              href="/src/pages/mainTherapyPage.html"
+              class="font-semibold"
+              >Therapy</a
+            >
+          </div>
+  
+          <div
+            class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+          >
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
+            />
+            <button
+              class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+  
+        <p class="text-center text-white mt-8 font-semibold">
+          copyright&copy; <span id="year"></span> thrive.techtribe all right
+          reserved
+        </p>
+      </footer>
+  
+      <!-- End of Footer -->
+
+    <script>
+            let countdownSeconds = localStorage.getItem('countdownSeconds') || 3600; 
+
+            function updateCountdown() {
+                const countdownElement = document.getElementById('countdown');
+                const minutes = Math.floor(countdownSeconds / 60);
+                const seconds = countdownSeconds % 60;
+                countdownElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            }
+
+
+            function submitMessage() {
+                const messageInput = document.getElementById('messageInput');
+                const messagesContainer = document.getElementById('messages');
+
+                const messageText = messageInput.value;
+                if (messageText.trim() !== '') {
+                    const messageElement = document.createElement('div');
+                    messageElement.className = 'flex bg-[#295700] rounded-[10px] w-[300px] h-[60px] mb-[30px]';
+                    messageElement.innerHTML = `<h2 class="text-[#D4DDCC] py-2 px-4 m-1">${messageText}</h2>`;
+                    messagesContainer.appendChild(messageElement);
+                    messageInput.value = '';
+
+                    
+                    localStorage.setItem('submittedMessage', messageText);
+                }
+            }
+
+            // Function to start countdown
+            function startCountdown() {
+                const countdownElement = document.getElementById('countdown');
+                const messageLocked = document.getElementById('messageLocked');
+                const sendMessageButton = document.getElementById('sendMessage');
+                const messageInputContainer = document.getElementById('messageInputContainer');
+
+                const countdownInterval = setInterval(() => {
+                    countdownSeconds--;
+
+                    if (countdownSeconds <= 0) {
+                        clearInterval(countdownInterval);
+                        countdownElement.textContent = '0:00';
+                        messageLocked.classList.remove('hidden');
+                        sendMessageButton.disabled = true;
+                        messageInputContainer.style.display = 'none';
+                    } else {
+                        updateCountdown();
+                    }
+
+                    // Save the countdown state to local storage
+                    localStorage.setItem('countdownSeconds', countdownSeconds.toString());
+                }, 1000);
+
+                // Initial update
+                updateCountdown();
+            }
+
+            document.getElementById('sendMessage').addEventListener('click', submitMessage);
+            startCountdown();
+    </script>
+
+</body>
+
+</html>

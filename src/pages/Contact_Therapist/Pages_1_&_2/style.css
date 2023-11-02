@@ -1,0 +1,67 @@
+/* Header */
+@layer utilities {
+    .slide-in {
+      animation-name: slide-in;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes slide-in {
+      from {
+        transform: translateY(-100%);
+      }
+
+      to {
+        transform: translateY(0%);
+      }
+    }
+
+    .slide-out {
+      animation-name: slide-out;
+      animation-duration: 1s;
+      animation-fill-mode: backwards;
+    }
+
+    @keyframes slide-out {
+      from {
+        transform: translateY(0%);
+      }
+
+      to {
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+nav {
+    font-family: 'Crimson Pro', serif;
+}
+
+#therapist-menu p {
+    font-family: 'Crimson Pro', serif;
+}
+
+#therapist-menu h2 {
+    font-family: 'Crimson Pro', serif;
+}
+
+#therapist-menu h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#in-touch h3 {
+    font-family: 'Crimson Pro', serif;
+}
+
+footer {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#feedback {
+    font-family: 'Crimson Pro', serif;
+}
+
+#chatPopup {
+    font-family: 'Crimson Pro', serif;
+}
+

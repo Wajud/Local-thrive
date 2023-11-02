@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp-Thrive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="background flex bg-[#D4DDCC]">
+        <div id="bgImage">
+            <img src="../assets/signIn images/signup image.jpg" alt="signup" class="w-[600px] h-[600px]">
+        </div>
+        <div class="absolute top-1/2 left-72 transform -translate-x-1/2 -translate-y-1/2 text-white font-monda text-3xl font-bold leading-[125%] tracking-[2.253px] capitalize">"Nuturing Mind,<br> Embracing Wellness"</div>
+          
+        <div class="container max-w-md mx-auto p-4">
+            <h2 class="text-2xl font-semibold font-['Crimson Pro'] uppercase mt-10 mb-8">CREATE AN ACCOUNT</h2>
+            <h3 class="text-xl font-normal font-['Crimson Pro'] capitalize mb-6">Let's Get Started with Your Sign Up</h3>
+            <form name="signUp" onsubmit="handleSignUp(event)">
+                <div class="form mb-6">
+                    <input type="text" id="name" name="name" placeholder="Name" required class="border-b-2 border-[#333] bg-transparent p-1 w-full focus:border-[#333] outline-none transition border-opacity-30">
+                </div>
+                <div class="form mb-6">
+                    <input type="email" id="email" name="email" placeholder="Email" required class="border-b-2 border-[#333] bg-transparent p-1 w-full focus:border-[#333] outline-none transition border-opacity-30">
+                </div>
+                <div class="form mb-6">
+                    <input type="password" id="password" name="password" placeholder="Password" required class="border-b-2 border-[#333] bg-transparent p-1 w-full focus:border-[#333] outline-none transition border-opacity-30">
+                </div>
+                <div class="form mb-6">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required class="border-b-2 border-[#333] bg-transparent p-1 w-full focus:border-[#333] outline-none transition border-opacity-30">
+                </div>
+
+                <div id="passwordLength" class="hidden text-red-500 font-semibold">
+                    <p class="text-center mb-4 ">Password should be more than 8 Characters!</p>
+                </div>
+
+                <div id="passwordMismatch" class="hidden text-red-500 font-semibold">
+                    <p class="text-center mb-4 ">Password Does not Match</p>
+                </div>
+
+                <button type="submit" class="style-button btn-success rounded-lg bg-[#295700] hover:bg-[#4D732A] flex w-[400px] h-[50px] justify-center items-center gap-20 flex-shrink-0 text-white font-monda text-24 font-semibold leading-[140%] tracking-[0.96px] capitalize">Sign Up</button>
+                <br>
+                <a href="https://accounts.google.com/o/" class="style-button btn-success style-button btn-success rounded-lg bg-[#295700] hover:bg-[#4D732A] flex w-[400px] h-[50px] justify-center items-center gap-20 flex-shrink-0 text-white font-monda text-24 font-semibold leading-[140%] tracking-[0.96px] capitalize">Sign Up with Google</a>
+                <p class="text-center mt-6">Do you have an account? <a href="signin.html" class="hover:text-[#4D732A] text-[#295700]">Log In</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="SignUp.js"></script>
+</body>
+</html>

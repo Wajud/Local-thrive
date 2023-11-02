@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> THE POWER OF TWOS</title>
+</head>
+<body class="bg-[#D9D9D9]">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .slide-in {
+            animation-name: slide-in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-in {
+            from {
+              transform: translateY(-100%);
+            }
+  
+            to {
+              transform: translateY(0%);
+            }
+          }
+  
+          .slide-out {
+            animation-name: slide-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-out {
+            from {
+              transform: translateY(0%);
+            }
+  
+            to {
+              transform: translateY(-100%);
+            }
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <!-- Live Header -->
+  
+      <header
+        class="bg-[#2A3D19] px-4 py-0 flex justify-between items-center z-30 relative"
+        id="header"
+      >
+        <img
+          src="images/thrive-logo.png"
+          alt="logo"
+          class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
+        />
+        <nav>
+          <div class="md:hidden cursor-pointer">
+            <img
+              src="images/hamburger.png"
+              alt="hamburger"
+              class="w-8 h-8 block"
+              id="openMenu"
+            />
+            <img
+              src="images/close-menu.png"
+              alt="close-menu"
+              class="w-8 h-8 hidden"
+              id="closeMenu"
+            />
+          </div>
+          <ul class="hidden md:flex text-slate-100">
+            <li>
+              <a href="/src/index.html" class="block px-4 py-4 font-semibold">Home</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/about.html"
+                class="block px-4 py-4 font-semibold"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/mainTherapyPage.html"
+                class="block px-4 py-4 font-semibold"
+                >Therapy</a
+              >
+            </li>
+            <li>
+              <a href="/src/pages/community/community.html" class="block px-4 py-4 font-semibold">Community</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/signup.html"
+                class="block px-4 py-4 font-semibold"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <ul
+        id="mobileMenu"
+        class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
+      >
+        <li>
+          <a
+            href="/src/index.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/about.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/mainTherapyPage.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Therapy</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/community/community.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Community</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/signup.html"
+            class="block pt-4 text-center text-lg font-semibold"
+            >Sign Up</a
+          >
+        </li>
+      </ul>
+    <h1 class="font-bold text-4xl py-5 text-center text-[#2A3D19]">THE POWER OF TWOS</h1>
+    <div class="flex flex-col lg:items-center justify-center px-10 bg-[#DCAE96] mr-20 ml-20 mb-4">
+        <div class="w-full lg:w-1/2 flex py-8">
+            <video controls src="videosplay/power.mp4"></video>
+        </div>
+        <div class="lg:px-5 lg:py-4 lg:mr-8 lg:ml-8 lg:mt-6 lg:mb-8">
+            <p class="text-[#2A3D19] text-xl">The power of friendship is a profound and transformative force that 
+                plays a crucial role in shaping our lives and well-being. Friendships are not merely social connections; 
+                they are dynamic relationships that offer a myriad of benefits and positive influences</p>
+        </div>
+        <div class="flex flex-col lg:flex-row lg:gap-16 gap-4 px-4 py-5 justify-center">
+            <button class="bg-[#2A3D19] text-white hover:bg-green-400 px-4 py-3 font-semibold"> ADD TO LIST </button>
+            <a download="" href="videosplay/power.mp4"><button class="flex gap-4 bg-[#2A3D19] text-white hover:bg-green-400 px-4 py-3 font-semibold w-full justify-center"> DOWNLOAD <img src="images/download.png" class="w-[20px]"></button></a>
+        </div>
+        <p class="text-center text-[#2A3D19] px-4 py-3 font-semibold border-solid border-2 border-[#2A3D19]"> COMMENTS </p>
+        <div class="flex flex-col w-full lg:w-2/3 mt-4">
+            <form class="flex flex-col items-center">
+                <textarea id="text" class="w-full border-solid border-1 border-[#2A3D19] bg-green-100 px-3 h-[200px]" placeholder="Please type your comment here"></textarea>
+            </form>
+        </div>
+            
+        <div class="flex flex-row gap-12 py-5 justify-center">
+            <a href="videos.html"><button class="bg-[#2A3D19] hover:bg-green-400 text-white px-6 py-3 font-semibold"> BACK </button></a>
+            <button class="bg-[#2A3D19] hover:bg-green-400 text-white px-6 py-3 font-semibold" onclick="handleSubmit()"> SUBMIT </button> 
+        </div>
+    </div>
+   
+
+    <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 mt-8 md:mt-0 relative">
+      <a href="#header"
+        ><img
+          src="images/triangle.png"
+          alt="triangle"
+          class="absolute bottom-8 right-4"
+      /></a>
+
+      <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
+        <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Thrive</h1>
+            <a href="/src/pages/about.html" class="font-semibold"
+              >About</a
+            >
+            <a href="/src/pages/moodTrack/index.mood.html" class="font-semibold">Mood Track</a>
+            <a href="/src/pages/Help-Support-Page/support.html" class="font-semibold"
+              >Help & Support</a
+            >
+          </div>
+
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Social</h1>
+            <a href="" class="font-semibold">Facebook</a>
+            <a href="" class="font-semibold">Instagram</a>
+            <a href="" class="font-semibold">Twitter</a>
+          </div>
+        </div>
+
+        <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
+          <h1 class="font-bold text-2xl mb-4">Services</h1>
+          <a
+            href="/src/pages/resources/resourcesMain.html"
+            class="font-semibold"
+            >Resources</a
+          >
+          <a
+            href="/src/pages/Relaxation/Relaxation8/relaxation8.html"
+            class="font-semibold"
+            >Relaxation</a
+          >
+          <a
+            href="/src/pages/mainTherapyPage.html"
+            class="font-semibold"
+            >Therapy</a
+          >
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+        >
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
+          />
+          <button
+            class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <p class="text-center text-white mt-8 font-semibold">
+        copyright&copy; <span id="year"></span> thrive.techtribe all right
+        reserved
+      </p>
+    </footer>
+  
+      <!-- End of Footer -->
+  
+      <script src="main.js"></script>
+</body>
+</html>

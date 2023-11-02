@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Video</title>
+</head>
+<body class="bg-[#D9D9D9]">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .slide-in {
+            animation-name: slide-in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-in {
+            from {
+              transform: translateY(-100%);
+            }
+  
+            to {
+              transform: translateY(0%);
+            }
+          }
+  
+          .slide-out {
+            animation-name: slide-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-out {
+            from {
+              transform: translateY(0%);
+            }
+  
+            to {
+              transform: translateY(-100%);
+            }
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <!-- Live Header -->
+  
+      <header
+        class="bg-[#2A3D19] px-4 py-0 flex justify-between items-center z-30 relative"
+        id="header"
+      >
+        <img
+          src="/src/assets/aboutAsset/Thrive logo.png"
+          alt="logo"
+          class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
+        />
+        <nav>
+          <div class="md:hidden cursor-pointer">
+            <img
+              src="/src/assets/communitypage-assets/hamburger.png"
+              alt="hamburger"
+              class="w-8 h-8 block"
+              id="openMenu"
+            />
+            <img
+              src="/src/assets/communitypage-assets/close-menu.png"
+              alt="close-menu"
+              class="w-8 h-8 hidden"
+              id="closeMenu"
+            />
+          </div>
+          <ul class="hidden md:flex text-slate-100">
+            <li>
+              <a href="/src/index.html" class="block px-4 py-4 font-semibold">Home</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/about.html"
+                class="block px-4 py-4 font-semibold"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/mainTherapyPage.html"
+                class="block px-4 py-4 font-semibold"
+                >Therapy</a
+              >
+            </li>
+            <li>
+              <a href="/src/pages/community/community.html" class="block px-4 py-4 font-semibold">Community</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/signup.html"
+                class="block px-4 py-4 font-semibold"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <ul
+        id="mobileMenu"
+        class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
+      >
+        <li>
+          <a
+            href="/src/index.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/about.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/mainTherapyPage.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Therapy</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/community/community.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Community</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/pages/signup.html"
+            class="block pt-4 text-center text-lg font-semibold"
+            >Sign Up</a
+          >
+        </li>
+      </ul>
+
+    <!-- End of Live Header -->
+    <!-- ---------------hero section here--------------------- -->
+    <section class="px-20 py-10 mb-20" id="hero">
+      <div class="w-full h-full flex items-center justify-center">
+        <div class="w-1/2">
+          <div class="text-6xl font-bold font-headers">
+            <h1>NURTURING <span class="text-navbar">MIND</span></h1>
+            <h1>EMBRACING</h1>
+            <h1>WELLNESS</h1>
+          </div>
+          <div class="flex items-center mb-10">
+            <div class="w-3/6 bg-navbar h-2"></div>
+            <div class="w-8 h-8 bg-navbar rotate-45"></div>
+          </div>
+          <p class="w-2/3">
+            Reclaim your mental well-being and live a life filled with purpose
+            and joy. Start your transformative journey today
+          </p>
+          <button
+            class="uppercase bg-button text-slate-50 font-bold mt-10 py-2 px-4 rounded-md"
+          >
+            get started
+          </button>
+        </div>
+        <div
+          class="w-1/2 h-128 overflow-hidden border-2 rounded-bl-8xl rounded-xl p-8 drop-shadow-md"
+        >
+          <img
+            class="w-full h-full object-cover rounded-bl-6xl rounded-xl"
+            src="./Assets/landing_photo.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- ---------------About us section here--------------------- -->
+    <section
+      id="about"
+      class="bg-background border-black border-b-2 px-40 pb-10"
+    >
+      <h2 class="text-3xl text-navbar text-center py-10">ABOUT US</h2>
+      <div class="flex items-center">
+        <div id="teamPicture">
+          <img class="w-3/4" src="./Assets/Ellipse 29.svg" alt="Team picture" />
+        </div>
+        <div id="aboutText" class="flex-1">
+          <p class="text-button">
+            Welcome to Thrive, Your Path to Emotional Wellness Empowering You
+            for a Balanced Life Life's challenges can sometimes take a toll on
+            our mental well-being. At mindCare we believe that everyone deserves
+            the tools to nurture their emotional health and lead a fulfilling
+            life. mindCare is designed to guide you on a journey of
+            self-discovery, resilience, and positivity.
+          </p>
+          <button class="bg-button text-slate-200 mt-10 py-2 px-4 rounded-md">
+            READ MORE
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ---------------why us section here--------------------- -->
+    <section
+      class="w-full h-full flex items-center justify-center flex-col px-20 bg-background"
+    >
+      <h1 class="text-2xl font-bold uppercase text-navbar font-headers py-10">
+        why us?
+      </h1>
+      <p class="font-body_text font-normal text-button">
+        take a step towards better mental well-being with our app designed to
+        support you on your journey
+      </p>
+      <div class="p-8 flex align-center justify-center gap-6 flex-wrap">
+        <a
+          class="w-1/4 h-80 flex flex-col items-center justify-center rounded-lg border-2 text-center drop-shadow-md bg-slate-100"
+          href="https://help-and-support.vercel.app/"
+        >
+          <div
+            class="w-20 h-20 p-4 flex items-center justify-center rounded-full mb-2 bg-background"
+          >
+            <img src="./Assets/privacy.svg" alt="privacy" />
+          </div>
+          <h2 class="mb-5 max-h-32 font-headers text-button">HELP & SUPPORT</h2>
+          <p class="font-body_text font-normal h-40 text-sm text-button">
+            We ensure that our digital footprint and sensitive data remain
+            protected from unwanted surveillance
+          </p>
+        </a>
+        <a
+          href="https://short-thrive-101.netlify.app/"
+          class="w-1/4 h-80 flex flex-col items-center justify-center rounded-lg text-center drop-shadow-md p-6 bg-card text-slate-100"
+        >
+          <div
+            class="w-20 h-20 p-5 flex items-center justify-center rounded-full mb-2 bg-background"
+          >
+            <img src="./Assets/community.svg" alt="privacy" />
+          </div>
+          <h2 class="mb-5 max-h-32 font-headers">COMMUNITY</h2>
+          <p class="font-body_text font-normal h-40 text-sm text-slate-50">
+            Our community support brings people together providing helps,
+            resources, and encouragement for collective growth
+          </p>
+        </a>
+        <a
+          href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+          class="w-1/4 h-80 flex flex-col items-center justify-center rounded-lg border-2 text-center drop-shadow-md p-6 bg-slate-100"
+        >
+          <div
+            class="w-20 h-20 p-4 flex items-center justify-center rounded-full mb-2 bg-background"
+          >
+            <img src="./Assets/therapy.svg" alt="privacy" />
+          </div>
+          <h2 class="mb-5 max-h-32 font-headers text-button">THERAPY</h2>
+          <p class="font-body_text font-normal h-40 text-sm text-button">
+            we give professional help for emotional well-being, by addressing
+            emotional challenges, gain insights and develop coping strategies
+          </p>
+        </a>
+        <a
+          class="w-1/4 h-80 flex flex-col items-center justify-center rounded-lg text-center drop-shadow-md p-6 bg-card text-slate-100"
+          href="https://thrive-relaxation-pages-frames-1-23.vercel.app/"
+        >
+          <div
+            class="w-20 h-20 p-4 flex items-center justify-center rounded-full mb-2 bg-background"
+          >
+            <img src="./Assets/relaxation.svg" alt="privacy" />
+          </div>
+          <h2 class="mb-5 max-h-32 font-headers">RELAXATION</h2>
+          <p class="font-body_text font-normal h-40 text-sm text-slate-50">
+            We ensure that our digital footprint and sensitive data remain
+            protected from unwanted surveillance
+          </p>
+        </a>
+        <div
+          class="w-1/4 h-80 flex flex-col items-center justify-center rounded-lg border-2 text-center drop-shadow-md p-6 bg-slate-100"
+        >
+          <div
+            class="w-20 h-20 p-4 flex items-center justify-center rounded-full mb-2 bg-background"
+          >
+            <img src="./Assets/user_center.svg" alt="privacy" />
+          </div>
+          <h2 class="mb-5 max-h-32 text-button">USER CENTERED</h2>
+          <p class="font-body_text font-normal h-40 text-sm text-button">
+            our application prioritizes the user interface as well as their
+            experience ,easy to navigate and explore
+          </p>
+        </div>
+        <div
+          class="w-1/4 h-80 flex flex-col items-center justify-center rounded-lg text-center drop-shadow-md p-6 bg-card text-slate-100"
+        >
+          <div
+            class="w-20 h-20 p-4 flex items-center justify-center rounded-full mb-2 bg-background"
+          >
+            <img src="./Assets/article.svg" alt="privacy" />
+          </div>
+          <h2 class="mb-5 max-h-32">ARTICLE</h2>
+          <p class="font-body_text font-normal h-40 text-sm text-slate-50">
+            discover practical tips , expert advice, and the latest trend in
+            mental wellness to help you navigate life’s challenges with
+            resilience and positivity
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ---------------Therapy section here--------------------- -->
+    <section class="px-20 flex flex-col items-center py-10 h-full">
+      <h2 class="text-2xl font-bold uppercase text-navbar font-headers py-10">
+        Our therapist
+      </h2>
+      <p class="px-4 text-center mb-10 text-button">
+        Discover the professionals behind your emotional growth and resilience
+        journey. Our therapists are highly qualified experts committed to
+        supporting your mental well-being.
+      </p>
+      <div class="flex items-center justify-center gap-10">
+        <div
+          class="flex flex-col items-center border-2 border-button gap-2 drop-shadow-md p-6 w-72"
+        >
+          <img src="./Assets/Ellipse 7.svg" alt="therapist one" />
+          <h3 class="font-bold text-button text-xl">A. Aishat</h3>
+          <p class="text-button">senior at therapy</p>
+        </div>
+        <div
+          class="flex flex-col items-center border-2 border-button gap-2 drop-shadow-md p-6 w-72"
+        >
+          <img src="./Assets/Ellipse 7 (1).svg" alt="therapist two" />
+          <h3 class="font-bold text-button text-xl">S. Chidinma</h3>
+          <p class="text-button">senior at therapy</p>
+        </div>
+        <div
+          class="flex flex-col items-center border-2 border-button gap-2 drop-shadow-md p-6 w-72"
+        >
+          <img src="./Assets/Ellipse 7 (2).svg" alt="therapist three" />
+          <h3 class="font-bold text-button text-xl">M. Musa</h3>
+          <p class="text-button">senior at therapy</p>
+        </div>
+      </div>
+      <button
+        class="text-center bg-button text-white py-2 px-4 rounded-md my-10"
+      >
+        <a href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+          >See more</a
+        >
+      </button>
+    </section>
+    <!-- ---------------Community section here--------------------- -->
+    <section
+      class="px-20 flex flex-col items-center py-10 h-full bg-background"
+    >
+      <h2 class="text-2xl font-bold uppercase text-navbar font-headers py-10">
+        OUR COMMUNITY
+      </h2>
+      <div class="mb-8 text-button">
+        <p class="flex justify-center">Join a Supportive Community</p>
+        <p class="flex justify-center">
+          Connect with a community of like-minded individuals who are on their
+          own paths to emotional wellness. Share your
+        </p>
+        <p class="flex justify-center">
+          experiences, learn from others, and find comfort in knowing you're not
+          alone.
+        </p>
+      </div>
+      <div class="overflow-hidden">
+        <img
+          src="./Assets/Rectangle 519.svg"
+          alt="Community image"
+          class="w-full object-cover"
+        />
+      </div>
+      <div class="flex justify-center p-10">
+        <button class="text-center bg-button text-white py-2 px-4 rounded-md">
+          <a href="https://short-thrive-101.netlify.app/">JOIN NOW</a>
+        </button>
+      </div>
+    </section>
+    <!-- ---------------Resources section here--------------------- -->
+    <section class="resources border border-black border-t-2 bg-background">
+      <h2 class="text-3xl text-green-900 flex justify-center py-5">
+        RESOURCES
+      </h2>
+      <p class="text-green-900 flex justify-center">
+        Our resources can provide you with valuable informations, tools, and
+        references to enhance your mental well-being, which include:
+      </p>
+      <div
+        class="resourcesContent flex justify-between h-full mt-10 w-2/3 mx-auto"
+      >
+        <div
+          class="rButtons h-full flex flex-col items-start gap-12 items-between"
+        >
+          <button class="bg-slate-200 p-2 w-64 drop-shadow-md">
+            Self-Help Guides
+          </button>
+          <button class="bg-slate-200 p-2 w-64 drop-shadow-md">
+            Online Support Communities
+          </button>
+          <button class="bg-slate-200 p-2 w-64 drop-shadow-md">Exercise</button>
+          <button class="bg-slate-200 p-2 w-64 drop-shadow-md">
+            Riddles and Jokes
+          </button>
+          <button class="bg-slate-200 p-2 w-64 drop-shadow-md">
+            Videos and audio Resources
+          </button>
+          <button class="bg-slate-200 p-2 w-64 drop-shadow-md">
+            Educational Materials
+          </button>
+        </div>
+        <div id="rImg" class="">
+          <img src="./Assets/Rectangle 382.png" alt="resources image" />
+        </div>
+      </div>
+      <button
+        class="flex items-center justify-center py-2 px-4 m-2 text-center bg-button text-white rounded-md mx-auto my-10"
+      >
+        VIEW RESOURCES
+      </button>
+    </section>
+    <!-- ---------------Testimonial section here--------------------- -->
+    <section
+      class="relative p-20 flex flex-col items-center justify-center mb-20 py-10"
+    >
+      <h3
+        class="text-center mb-4 font-headers text-2xl font-bold uppercase text-button"
+      >
+        Testimonial
+      </h3>
+      <!-- ---------two card content----------- -->
+      <div class="flex flex-row-reverse gap-5 mb-8">
+        <img class="w-52" src="./Assets/chi.svg" alt="chi" />
+        <div
+          class="bg-card w-2/3 p-8 text-slate-100 relative h-60 rounded-l-2xl mb-4"
+        >
+          <img src="./Assets/quote1.svg" alt="quote" />
+          <p class="font-body_text font-medium text-sm">
+            Thrive has been a game changer for me! The mindfulness exercises and
+            guided meditation sessions have helped me manage my stress and
+            anxiety better. The user-friendly interface makes it easy to
+            navigate, and I appreciate the personalized recommendations based on
+            my progress.
+          </p>
+          <img
+            class="absolute right-10"
+            src="./Assets/quote2.svg"
+            alt="quote"
+          />
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <img class="w-52" src="./Assets/rah.svg" alt="chi" />
+        <div
+          class="bg-card w-2/3 p-8 text-slate-100 relative h-60 rounded-r-2xl"
+        >
+          <img src="./Assets/quote1.svg" alt="quote" />
+          <p class="font-body_text font-medium text-sm">
+            Thrive has been a game changer for me! The mindfulness exercises and
+            guided meditation sessions have helped me manage my stress and
+            anxiety better. The user-friendly interface makes it easy to
+            navigate, and I appreciate the personalized recommendations based on
+            my progress.
+          </p>
+          <img
+            class="absolute right-10"
+            src="./Assets/quote2.svg"
+            alt="quote"
+          />
+        </div>
+      </div>
+      <div></div>
+    </section>
+    <!-- ---------------Contact section here--------------------- -->
+    <section class="py-10 bg-background text-button px-20">
+      <h2 class="uppercase font-headers text-center mb-10 text-2xl">Contact</h2>
+      <p class="text-lg font-body_text font-medium">
+        We value your input! we respond without delay
+      </p>
+      <div class="mt-20 flex items-start gap-60">
+        <div class="w-1/3">
+          <div class="flex items-center gap-4 mb-10">
+            <img src="./Assets/facebook.svg" alt="" />
+            <span class="font-body_text font-medium">Linkedin</span>
+          </div>
+          <div class="flex items-center gap-4 mb-10">
+            <img src="./Assets/linkedin.svg" alt="" />
+            <span class="font-body_text font-medium">Twitter</span>
+          </div>
+          <div class="flex items-center gap-4 mb-10">
+            <img src="./Assets/instagram.svg" alt="" />
+            <span class="font-body_text font-medium">instagram</span>
+          </div>
+          <div class="flex items-center gap-4 mb-10">
+            <img src="./Assets/blog.svg" alt="" />
+            <span class="font-body_text font-medium">Blog</span>
+          </div>
+        </div>
+        <form class="w-2/3 flex flex-col gap-5" id="contact" name="contact_us">
+          <input
+            class="w-2/3 block h-14 p-2 border-2 border-button"
+            type="text"
+            placeholder="Name"
+          />
+          <input
+            class="w-2/3 block h-14 p-2 border-2 border-button"
+            type="text"
+            placeholder="Email"
+          />
+          <textarea
+            class="w-2/3 h-40 border-2 p-2 border-button"
+            placeholder="Message"
+          ></textarea>
+          <input
+            class="w-2/3 text-slate-100 uppercase rounded-md cursor-pointer hover:bg-navbar text-xl font-body_text font-semibold h-14 bg-button"
+            type="submit"
+            name="contact_submit"
+            id="contact_submit"
+          />
+        </form>
+      </div>
+    </section>
+    <!-- ---------------Footer section here--------------------- -->
+    <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 mt-8 md:mt-0 relative">
+        <a href="#header"
+          ><img
+            src="/src/assets/aboutAsset/Vector.png"
+            alt="triangle"
+            class="absolute bottom-8 right-4"
+        /></a>
+  
+        <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
+          <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
+            <div class="text-white flex flex-col gap-2">
+              <h1 class="font-bold text-2xl mb-4">Thrive</h1>
+              <a href="/src/pages/about.html" class="font-semibold"
+                >About</a
+              >
+              <a href="" class="font-semibold">Mood Track</a>
+              <a href="/src/pages/Help-Support-Page/support.html" class="font-semibold"
+                >Help & Support</a
+              >
+            </div>
+  
+            <div class="text-white flex flex-col gap-2">
+              <h1 class="font-bold text-2xl mb-4">Social</h1>
+              <a href="" class="font-semibold">Facebook</a>
+              <a href="" class="font-semibold">Instagram</a>
+              <a href="" class="font-semibold">Twitter</a>
+            </div>
+          </div>
+  
+          <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
+            <h1 class="font-bold text-2xl mb-4">Services</h1>
+            <a
+              href="/src/pages/resources/resourcesMain.html"
+              class="font-semibold"
+              >Resources</a
+            >
+            <a
+              href="/src/pages/Relaxation/Relaxation8/relaxation8.html"
+              class="font-semibold"
+              >Relaxation</a
+            >
+            <a
+              href="/src/pages/mainTherapyPage.html"
+              class="font-semibold"
+              >Therapy</a
+            >
+          </div>
+  
+          <div
+            class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+          >
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
+            />
+            <button
+              class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+  
+        <p class="text-center text-white mt-8 font-semibold">
+          copyright&copy; <span id="year"></span> thrive.techtribe all right
+          reserved
+        </p>
+      </footer>
+  
+      <!-- End of Footer -->
+  
+      <script src="main.js"></script>
+      <script src="/src/pages/community/headerandfooter.js"></script>
+  </body>
+</html>
+

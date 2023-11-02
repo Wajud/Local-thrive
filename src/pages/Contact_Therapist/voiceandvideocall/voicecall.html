@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Call</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .clipPathMobile {
+          clip-path: polygon(50% 20%, 100% 0, 100% 100%, 50% 80%, 0 100%, 0 0);
+        }
+
+        .clipPathDesktop {
+          clip-path: polygon(49% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+        }
+
+        .slide-in {
+          animation-name: slide-in;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+        }
+
+        @keyframes slide-in {
+          from {
+            transform: translateY(-100%);
+          }
+
+          to {
+            transform: translateY(0%);
+          }
+        }
+
+        .slide-out {
+          animation-name: slide-out;
+          animation-duration: 1s;
+          animation-fill-mode: backwards;
+        }
+
+        @keyframes slide-out {
+          from {
+            transform: translateY(0%);
+          }
+
+          to {
+            transform: translateY(-100%);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Live Header -->
+
+    <header
+      class="bg-[#2A3D19] px-4 md:pr-0 py-0 flex justify-between items-center z-30 relative"
+      id="header"
+    >
+      <img
+        src="images/thrive-logo.png"
+        alt="logo"
+        class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
+      />
+      <nav>
+        <div class="md:hidden cursor-pointer">
+          <img
+            src="images/hamburger.png"
+            alt="hamburger"
+            class="w-8 h-8 block"
+            id="openMenu"
+          />
+          <img
+            src="images/close-menu.png"
+            alt="close-menu"
+            class="w-8 h-8 hidden"
+            id="closeMenu"
+          />
+        </div>
+
+        <ul class="hidden md:flex text-slate-100">
+          <li>
+            <a href="/src/index.html" class="block px-4 py-4 font-semibold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/pages/about.html"
+              class="block px-4 py-4 font-semibold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/pages/mainTherapyPage.html"
+              class="block px-4 py-4 font-semibold"
+              >Therapy</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/pages/community/community.html"
+              class="block px-4 py-4 font-semibold"
+              >Community</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/pages/signup.html"
+              class="block px-4 py-4 font-semibold"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <ul
+      id="mobileMenu"
+      class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
+    >
+      <li>
+        <a
+          href="/src/index.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/src/pages/about.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          href="/src/pages/mainTherapyPage.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+          >Therapy</a
+        >
+      </li>
+      <li>
+        <a
+          href="/src/pages/community/community.html"
+          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+          >Community</a
+        >
+      </li>
+      <li>
+        <a
+          href="/src/pages/signup.html"
+          class="block pt-4 text-center text-lg font-semibold"
+          >Sign Up</a
+        >
+      </li>
+    </ul>
+
+    <!-- End of Live Header -->
+
+    <section class="bg-[#D4DDCC] flex items-start gap-12 px-8 py-4 h-[100vh]">
+      <div class="hidden md:block w-2/7 self-stretch relative overflow-hidden">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-[rgba(220,174,150,0.7)] z-10 rounded-md"
+        ></div>
+        <div class="w-full px-2 py-4 rounded-md h-full">
+          <h1 class="text-green-500 font-semibold text-lg px-2 mb-2">
+            Current Therapist
+          </h1>
+
+          <div
+            class="bg-[#fff] rounded-md px-2 py-1 flex items-center gap-4 mb-8"
+          >
+            <img
+              src="images/musa.png"
+              alt="musa"
+              class="w-12 h-12 rounded-full"
+            />
+            <div class="">
+              <h1 class="text-green-500 font-semibold text-lg">M. Musa</h1>
+              <p class="text-green-500">Senior At Therapy</p>
+            </div>
+          </div>
+
+          <h1 class="text-green-500 font-semibold text-lg px-2 mb-2">
+            Previous Therapists
+          </h1>
+          <div class="flex flex-col gap-4">
+            <div class="bg-[#fff] rounded-md px-2 py-1 flex items-center gap-4">
+              <img
+                src="images/wajud.png"
+                alt="wajud"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="bg-[#fff]">
+                <h1 class="text-green-500 font-semibold text-lg">K. Wajud</h1>
+                <p class="text-green-500">Senior At Therapy</p>
+              </div>
+            </div>
+
+            <div class="bg-[#fff] rounded-md px-2 py-2 flex items-center gap-4">
+              <img
+                src="images/rahmat.png"
+                alt="rahmat"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="bg-[#fff]">
+                <h1 class="text-green-500 font-semibold text-lg">P. Rahmat</h1>
+                <p class="text-green-500">Senior At Therapy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#DCAE96] w-full md:w-[65%] mt-12">
+        <div class="px-4 py-1 bg-[#295700]">
+          <img
+            src="images/thrive-logo.png"
+            alt="logo"
+            class="w-8 h-8 object-cover"
+          />
+        </div>
+
+        <div
+          class="bg-[#D4DDCC] flex flex-col items-center justify-center min-h-[50vh] m-2 mr-4 ml-4 rounded-lg"
+        >
+          <img
+            src="images/musa.png"
+            alt="musa"
+            class="w-28 h-28 rounded-full mb-2"
+          />
+          <h1 class="text-2xl font-bold text-center text-green-700">M. MUSA</h1>
+          <h1 class="text-lg font-semibold text-center text-[#E60E1B]">
+            <span id="minutes">60</span><span>:</span
+            ><span id="seconds">00</span>
+          </h1>
+        </div>
+
+        <div class="flex justify-center gap-4 my-2">
+          <div class="bg-[#D4DDCC] px-2 py-2 rounded-full">
+            <img
+              src="images/Microphone.png"
+              alt="Microphone"
+              class="w-4 h-4 rounded-full"
+            />
+          </div>
+
+          <div
+            class="bg-[#D4DDCC] min-w-fit px-1 py-1 rounded-full flex items-center justify-center"
+          >
+            <img
+              src="images/end-call.png"
+              alt="end-call"
+              class="scale-75 object-cover rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Footer  -->
+
+    <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 relative -mt-32 md:mt-0">
+      <a href="#header"
+        ><img
+          src="images/triangle.png"
+          alt="triangle"
+          class="absolute bottom-8 right-4"
+      /></a>
+
+      <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
+        <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Thrive</h1>
+            <a href="/src/pages/about.html" class="font-semibold">About</a>
+            <a href="" class="font-semibold">Mood Track</a>
+            <a
+              href="/src/pages/Help-Support-Page/support.html"
+              class="font-semibold"
+              >Help & Support</a
+            >
+          </div>
+
+          <div class="text-white flex flex-col gap-2">
+            <h1 class="font-bold text-2xl mb-4">Social</h1>
+            <a href="" class="font-semibold">Facebook</a>
+            <a href="" class="font-semibold">Instagram</a>
+            <a href="" class="font-semibold">Twitter</a>
+          </div>
+        </div>
+
+        <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
+          <h1 class="font-bold text-2xl mb-4">Services</h1>
+          <a
+            href="/src/pages/resources/resourcesMain.html"
+            class="font-semibold"
+            >Resources</a
+          >
+          <a
+            href="/src/pages/Relaxation/Relaxation8/relaxation8.html"
+            class="font-semibold"
+            >Relaxation</a
+          >
+          <a href="/src/pages/mainTherapyPage.html" class="font-semibold"
+            >Therapy</a
+          >
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+        >
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
+          />
+          <button
+            class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <p class="text-center text-white mt-8 font-semibold">
+        copyright&copy; <span id="year"></span> thrive.techtribe all right
+        reserved
+      </p>
+    </footer>
+
+    <!-- End of Footer -->
+
+    <script src="headerandfooter.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
